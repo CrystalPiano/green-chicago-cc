@@ -1,0 +1,425 @@
+
+/*added google fonts to get file to load to github.*/
+
+/*Do not change this because the Map API needs its Div and 
+its container divs to have height defined otherwise it will 
+not display*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, .mapwrapper {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 16px;
+}
+
+input {
+	font-size: 14px;
+	width: 55px;
+}
+.mapwrapper{
+	clear: both;
+}
+
+.navwrapper {
+	margin: 0 auto;
+	height: 55px;
+	width: 384px;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Oswald', sans-serif;
+}
+
+h3 {
+	color: #66cc00;
+}
+
+.logo {
+	margin: 10px;
+}
+
+.logo-image {
+	width:100%;
+}
+
+.cC-logo {
+	width: 100px;
+	margin: 0 auto;
+	display: block;
+	margin-top: 50px;
+}
+
+.cntr {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.stars {
+	margin: 15px 0px 0px 0px;
+	padding: 0;
+	clear: both;
+	width: 100px;
+}
+.nav-container {
+	min-height: 200px;
+	height: 200px;
+}
+
+.nav-item {
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 10px;
+	border: 1px solid #ffffff;
+	padding: 5px;
+	color: #3D3D3D;
+	cursor: pointer;
+	float: left;
+	overflow: hidden;
+	margin: 0px 7px 0px 7px;
+}
+
+.nav-item:hover {
+	transition-duration: 0.25s;
+	color:#66CC00; 
+}
+
+.nav-item:hover > .nav-text {
+	transition-duration: 0.25s;
+	color:#66CC00;
+}
+
+.nav-item:active {
+	transition-duration: 0.25s;
+	color:#66CC00;
+	background-color: #E2FFD7;
+}
+
+.nav-item:active > .icon {
+	transition-duration: 0.1s;
+	color:#66CC00;
+	font-size: 21px;
+}
+
+.future:hover {
+	transition-duration: 0.25s;
+	color: red; 
+}
+
+.future:hover > .nav-text {
+	transition-duration: 0.25s;
+	color: red;
+}
+
+.future:active {
+	transition-duration: 0.25s;
+	color: red;
+	background-color: #ffcccc;
+}
+.future:active > .icon {
+	transition-duration: 0.1s;
+	color: red;
+	font-size: 21px;
+}
+
+.nav-text {
+	visibility: hidden;
+}
+
+.sub-menu {
+	background-color: transparent;
+	border: none;
+}
+
+.footer {
+ 	position: absolute;
+ 	bottom: 0;
+ 	width: 80%;
+ 	/* Set the fixed height of the footer here */
+ 	height: 150px;
+}
+
+.icon {
+	font-size: 20px;
+}
+
+.active-button {
+	color:#66CC00;
+}
+
+.weather {
+	width: 120px;
+	font-family: 'Oswald', sans-serif;
+	position: absolute;
+  	top: 80px;
+  	right: 15px;
+  	z-index: 99;
+}
+
+.weather-row {
+	height: 23px;
+	width: 60px;
+	text-align: center;
+}
+
+.current-temp {
+	font-size: 32px;
+	text-align: center;
+	height: 46px;
+	width: 60px;
+	border-right: 1px solid;
+	text-align: center;
+}
+
+.fl-l {
+	float: left;
+}
+
+.fl-r {
+	float: right;
+}
+
+.navbar-nav>li {
+	float: none;
+}
+
+.navbar-nav>li>a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 75px;
+ }
+
+ .zip-search {
+ 	font-family: 'Oswald', sans-serif;
+ 	padding: 10px;
+ 	background-color: #e8e8e8;
+ 	border: 1px solid;
+ 	text-align: left;
+  	width: 160px;
+  	position: absolute;
+  	top: 20px;
+  	right: 20px;
+  	z-index: 98;
+ }
+
+/*****************************/
+/* infowindow customizations */ 
+/*****************************/
+
+.gm-style-iw {
+	color: #3D3D3D;
+}
+
+.infoWinContainer { 
+	font-family: 'Open Sans Condensed', sans-serif;
+	width: 275px;
+	height: 175px;
+	color: #3D3D3D;
+ 	padding-left: 2px;
+ }
+
+
+.iw-Title { 
+
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 18px;
+	padding: 10px;
+	margin-bottom: 5px;
+	background-color: #B3DDF2;
+	color: white;
+} 
+
+.iw-subTitle { 
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 5px 0;
+	color: #FF0000; 	
+} 
+
+.iw-scroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	background-color: #F5F5F5;
+}
+
+.iw-scroll::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+.iw-scroll::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #a2c523;
+}
+
+
+/* Modal Customizations */
+
+.modal-content { 
+	font-family: 'Poiret One', sans-serif;
+    font-size: 16px;
+}
+
+.modal-title {
+	width: 300px;
+	margin: 0 auto;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+
+@media(max-width:767px){
+  .navbar-nav>li>a {
+      margin-left: 0px;
+	  margin-right: 0px;
+  }
+}
+
+@media(min-width:768px){
+  .navbar-nav>li>a {
+      margin-left: -15px;
+	  margin-right: -15px;
+  }
+}
+
+@media(min-width:992px){
+  .navbar-nav>li>a {
+      margin-left: -15px;
+	  margin-right: -15px;
+  }
+}
+
+@media(min-width:1200px){
+
+	.nav-item{
+		font-size: 16px;
+		width: 100%;
+		text-align: left;
+		float: none;
+		margin-bottom: 8px;
+	}
+
+	.navbar {
+		margin-bottom: 0px;
+		position: relative;
+		min-height: 100%;
+	}
+
+	.sub-menu {
+		margin-bottom: 0px;
+	}
+
+	.nav-text {
+		visibility: visible;
+	}
+
+	.mapwrapper {
+		clear:none;
+	}
+
+	.navwrapper {
+		width: 100%;
+		position: relative;
+	}
+
+  .navbar-nav>li>a {
+      margin-left: -15px;
+	  margin-right: -15px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-header {
+      float: none;
+      margin: 0 auto;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+      float: none;
+      margin: 0 auto;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      text-align: center;
+      margin-top:5px;
+  }
+  .navbar-fixed-top {
+      top: 0;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+      width: 75px;
+      margin-left: -15px;
+	  margin-right: -15px;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+  .sub-menu{
+  	width:75px;
+  }
+  .footer{
+  	width:75px;
+  	position: absolute;
+    top: 5px;
+    right: 15px;
+  }
+  .weather {
+  	position: absolute;
+  	top: 265px;
+  	right: 15px;
+  	z-index: 99;
+  }
+
+  .zip-search {
+  	text-align: left;
+  	width: 160px;
+  	position: absolute;
+  	top: 200px;
+  	right: 15px;
+  	z-index: 98;
+  }
+
+  .stars {
+  	display: block;
+  	margin: 0 auto;
+  	margin-top: 12px;
+  }
+
+  .mapwrapper {
+  	position: relative;
+	overflow: visible;
+  }
+
+  .logo-image{
+  	width: 275px;
+  }
+
+}
